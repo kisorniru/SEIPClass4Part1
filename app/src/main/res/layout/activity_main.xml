@@ -12,7 +12,7 @@
         android:id="@+id/naemAgeTV"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Name &amp; Age Input Area"
+        android:text="Name, Age, Phome &amp; Email Input Area"
         android:gravity="center"
         android:textStyle="italic"
         android:textColor="@android:color/black"
@@ -22,13 +22,29 @@
         android:id="@+id/nameET"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="siddique"
         android:hint="Name"/>
 
     <EditText
         android:id="@+id/ageET"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="27"
         android:hint="Age"/>
+
+    <EditText
+        android:id="@+id/phoneET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="01725156188"
+        android:hint="Phone"/>
+
+    <EditText
+        android:id="@+id/emailET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="kisorniru@gmail.com"
+        android:hint="Email"/>
 
     <TextView
         android:id="@+id/checkBoxTV"

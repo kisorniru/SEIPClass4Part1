@@ -4,9 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".registeredActivity">
+    tools:context=".registeredActivity"
+    android:padding="8dp">
 
-    <TableRow>
+    <TableRow
+        android:paddingBottom="8dp">
 
         <TextView
             android:layout_width="0dp"
@@ -27,7 +29,8 @@
 
     </TableRow>
 
-    <TableRow>
+    <TableRow
+        android:paddingBottom="8dp">
 
         <TextView
             android:layout_width="0dp"
@@ -48,7 +51,8 @@
 
     </TableRow>
 
-    <TableRow>
+    <TableRow
+        android:paddingBottom="8dp">
 
         <TextView
             android:layout_width="0dp"
@@ -69,7 +73,8 @@
 
     </TableRow>
 
-    <TableRow>
+    <TableRow
+        android:paddingBottom="8dp">
 
         <TextView
             android:layout_width="0dp"
@@ -90,7 +95,8 @@
 
     </TableRow>
 
-    <TableRow>
+    <TableRow
+        android:paddingBottom="8dp">
 
         <TextView
             android:layout_width="0dp"
@@ -108,6 +114,68 @@
             android:text="Name"
             style="?android:textAppearanceMedium"
             android:textColor="@android:color/black"/>
+
+    </TableRow>
+
+    <TableRow
+        android:paddingBottom="8dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Phone : "
+            android:textColor="@android:color/black"
+            style="?android:textAppearanceMedium"/>
+
+        <TextView
+            android:id="@+id/phoneValueTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:text="Name"
+            style="?android:textAppearanceMedium"
+            android:textColor="@android:color/black"/>
+
+        <ImageView
+            android:id="@+id/callIV"
+            android:src="@drawable/call"
+            android:layout_width="50dp"
+            android:layout_height="35dp"/>
+
+        <ImageView
+            android:id="@+id/smsIV"
+            android:src="@drawable/sms"
+            android:layout_width="50dp"
+            android:layout_height="33dp"/>
+
+    </TableRow>
+
+    <TableRow
+        android:paddingBottom="8dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Email : "
+            android:textColor="@android:color/black"
+            style="?android:textAppearanceMedium"/>
+
+        <TextView
+            android:id="@+id/emailValueTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:text="Name"
+            style="?android:textAppearanceMedium"
+            android:textColor="@android:color/black"/>
+
+        <ImageView
+            android:id="@+id/emailIV"
+            android:src="@drawable/email"
+            android:layout_width="50dp"
+            android:layout_height="32dp"/>
 
     </TableRow>
 

@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     //    Example of a listener
     private RadioGroup radioGroup;
 
-    private EditText nameET, ageET;
+    private EditText nameET, ageET, phoneET, emailET;
     private String gender = "Male";
     private List<String> languages = new ArrayList<>();
 
@@ -36,6 +36,8 @@ public class MainActivity extends AppCompatActivity {
 
         nameET = findViewById(R.id.nameET);
         ageET = findViewById(R.id.ageET);
+        phoneET = findViewById(R.id.phoneET);
+        emailET = findViewById(R.id.emailET);
 
         radioGroup = findViewById(R.id.genderRG);
         // anonymous class implementation
@@ -78,18 +80,6 @@ public class MainActivity extends AppCompatActivity {
         });
         citySP.setSelection(getCities().indexOf("MES"));
 
-        Intent intent = getIntent();
-//        Employee employee = (Employee) intent.getSerializableExtra("emp");
-        Employee employee = (Employee) intent.getSerializableExtra("emp");
-        if (employee != null){
-            String name = employee.getName();
-            nameET.setText(name);
-            Toast.makeText(this, "Name : "+name, Toast.LENGTH_SHORT).show();
-
-        }else {
-            Toast.makeText(this, "Hello, I'm came back!", Toast.LENGTH_SHORT).show();
-        }
-
     }
 
     public void selectLanguage(View view) {
@@ -115,11 +105,12 @@ public class MainActivity extends AppCompatActivity {
     public void register(View view) {
         String name = nameET.getText().toString();
         String age = ageET.getText().toString();
-        Employee employee = new Employee(name, age, gender, languages, city);
+        String phone = phoneET.getText().toString();
+        String email = emailET.getText().toString();
+        Employee employee = new Employee(name, age, phone, email, gender, languages, city);
         // Toast.makeText(this, "Register", Toast.LENGTH_SHORT).show();
         // Explicit Intent
         Intent intent = new Intent(this, registeredActivity.class);
-        intent.putExtra("msg", "Wellcome to new activity.");
         intent.putExtra("emp", employee);
         startActivity(intent);
     }
