@@ -5,10 +5,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -21,6 +24,10 @@ public class MainActivity extends AppCompatActivity {
     private EditText nameET, ageET;
     private String gender = "Male";
     private List<String> languages = new ArrayList<>();
+
+    private Spinner citySP;
+    private String city;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +48,36 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+        citySP = findViewById(R.id.citySP);
+        /*
+//        Default View
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this,
+                android.R.layout.simple_spinner_item,
+                getCities()
+        );
+        */
+//        Custom View
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, R.layout.city_spinner, getCities());
+
+        citySP.setAdapter(arrayAdapter);
+
+
+        citySP.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                city = getCities().get(position);
+//                city = parent.getItemAtPosition(position).toString();
+                Toast.makeText(MainActivity.this, "city : "+city, Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+        citySP.setSelection(getCities().indexOf("MES"));
+
         Intent intent = getIntent();
 //        Employee employee = (Employee) intent.getSerializableExtra("emp");
         Employee employee = (Employee) intent.getSerializableExtra("emp");
@@ -53,12 +90,6 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "Hello, I'm came back!", Toast.LENGTH_SHORT).show();
         }
 
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        Toast.makeText(this, "On Resume!", Toast.LENGTH_SHORT).show();
     }
 
     public void selectLanguage(View view) {
@@ -84,12 +115,36 @@ public class MainActivity extends AppCompatActivity {
     public void register(View view) {
         String name = nameET.getText().toString();
         String age = ageET.getText().toString();
-        Employee employee = new Employee(name, age, gender, languages);
+        Employee employee = new Employee(name, age, gender, languages, city);
         // Toast.makeText(this, "Register", Toast.LENGTH_SHORT).show();
         // Explicit Intent
         Intent intent = new Intent(this, registeredActivity.class);
         intent.putExtra("msg", "Wellcome to new activity.");
         intent.putExtra("emp", employee);
         startActivity(intent);
+    }
+
+    private List<String> getCities(){
+        List<String>cities = new ArrayList<>();
+        cities.add("Abdullahpur");
+        cities.add("House Building");
+        cities.add("Azompur");
+        cities.add("Rajlokhi");
+        cities.add("Joshimuddin");
+        cities.add("Airport");
+        cities.add("Kawla");
+        cities.add("Khilkhet");
+        cities.add("Bissho Road");
+        cities.add("Sewra");
+        cities.add("MES");
+        cities.add("Bonani");
+        cities.add("Firmgate");
+        cities.add("Kawran Bazar");
+        cities.add("Bangla Motor");
+        cities.add("Poribug");
+        cities.add("Sahbug");
+        cities.add("Motsho Vobon");
+        cities.add("Kakrail");
+        return cities;
     }
 }

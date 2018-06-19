@@ -13,11 +13,12 @@ import java.util.List;
 
 public class registeredActivity extends AppCompatActivity {
 
-    private TextView nameTV, ageTV, genderTV, languagesTV;
+    private TextView nameTV, ageTV, genderTV, languagesTV, cityTV;
     private String name;
     private String age;
     private String gender;
     private List<String>languages;
+    private String city;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +29,7 @@ public class registeredActivity extends AppCompatActivity {
         ageTV = findViewById(R.id.ageValueTV);
         genderTV = findViewById(R.id.genderValueTV);
         languagesTV = findViewById(R.id.languagesValueTV);
+        cityTV = findViewById(R.id.cityValueTV);
 
         Intent intent = getIntent();
         String msg = intent.getStringExtra("msg");
@@ -48,6 +50,9 @@ public class registeredActivity extends AppCompatActivity {
             String languages = TextUtils.join(", ", employee.getLanguages());
             languagesTV.setText(languages);
 
+            String city = employee.getCity();
+            cityTV.setText(city);
+
         }catch (NullPointerException e){
 
             Toast.makeText(this, "Invalid Object", Toast.LENGTH_SHORT).show();
@@ -57,7 +62,7 @@ public class registeredActivity extends AppCompatActivity {
 
     public void update(View view) {
         Toast.makeText(this, "This is working", Toast.LENGTH_SHORT).show();
-        Employee employee = new Employee(name, age, gender, languages);
+        Employee employee = new Employee(name, age, gender, languages, city);
         Intent intent = new Intent(this, MainActivity.class);
         intent.putExtra("emp", employee);
         startActivity(intent);
