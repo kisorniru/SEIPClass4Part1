@@ -180,6 +180,38 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Date Input Area"
+        android:gravity="center"
+        android:textStyle="italic"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/dateTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Date Of Birth :"
+            android:onClick="selectLanguage"/>
+
+        <Button
+            android:id="@+id/dateBTN"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Select"
+            android:onClick="selectDate"/>
+
+    </LinearLayout>
+
     <Button
         android:id="@+id/registerBTN"
         android:layout_width="match_parent"

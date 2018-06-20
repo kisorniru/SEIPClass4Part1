@@ -15,7 +15,7 @@ import android.widget.Toast;
 
 public class registeredActivity extends AppCompatActivity {
 
-    private TextView nameTV, ageTV, genderTV, languagesTV, cityTV, phoneTV, emailTV;
+    private TextView nameTV, ageTV, genderTV, languagesTV, cityTV, phoneTV, emailTV, dobValueTV;
     private ImageView callIV, smsIV, emailIV;
 
     @Override
@@ -33,6 +33,7 @@ public class registeredActivity extends AppCompatActivity {
         callIV = findViewById(R.id.callIV);
         emailIV = findViewById(R.id.emailIV);
         smsIV = findViewById(R.id.smsIV);
+        dobValueTV = findViewById(R.id.dobValueTV);
 
         final Intent intent = getIntent();
         final Employee employee = (Employee) intent.getSerializableExtra("emp");
@@ -58,6 +59,9 @@ public class registeredActivity extends AppCompatActivity {
 
             String email = employee.getEmail();
             emailTV.setText(email);
+
+            String dob = employee.getDob();
+            dobValueTV.setText(dob);
 
         } catch (NullPointerException e) {
 

@@ -11,8 +11,9 @@ public class Employee implements Serializable{
     private String gender;
     private List<String>languages;
     private String city;
+    private String dob;
 
-    public Employee(String name, String age, String phone, String email, String gender, List<String>languages, String city){
+    public Employee(String name, String age, String phone, String email, String gender, List<String>languages, String city, String dob){
         this.name = name;
         this.age = age;
         this.phone = phone;
@@ -20,6 +21,7 @@ public class Employee implements Serializable{
         this.gender = gender;
         this.languages = languages;
         this.city = city;
+        this.dob = dob;
     }
 
     public String getName() {
@@ -48,5 +50,9 @@ public class Employee implements Serializable{
 
     public String getCity() {
         return city;
+    }
+
+    public String getDob() {
+        return dob;
     }
 }
