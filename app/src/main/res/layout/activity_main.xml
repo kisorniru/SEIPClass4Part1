@@ -26,18 +26,10 @@
         android:hint="Name"/>
 
     <EditText
-        android:id="@+id/ageET"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="27"
-        android:hint="Age"/>
-
-    <EditText
         android:id="@+id/phoneET"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="01725156188"
-        android:hint="Phone"/>
+        android:hint="0123456789"/>
 
     <EditText
         android:id="@+id/emailET"
@@ -54,7 +46,8 @@
         android:gravity="center"
         android:textStyle="italic"
         android:textColor="@android:color/black"
-        android:textSize="20sp"/>
+        android:textSize="20sp"
+        style="@android:style/Widget.EditText"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -200,7 +193,8 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Date Of Birth :"
-            android:onClick="selectLanguage"/>
+            android:onClick="selectLanguage"
+            style="@android:style/Widget.EditText"/>
 
         <Button
             android:id="@+id/dateBTN"

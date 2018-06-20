@@ -4,8 +4,6 @@ import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.TextUtils;
-import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.AdapterView;
@@ -30,9 +28,9 @@ import java.util.regex.Pattern;
 
 public class MainActivity extends AppCompatActivity {
     private RadioGroup radioGroup;
-    private EditText nameET, ageET, phoneET, emailET;
+    private EditText nameET, phoneET, emailET;
     private String email, name, age,phone, date;
-    private TextView checkBoxTV;
+    private TextView checkBoxTV, dateTV;
     private String gender = "Male";
     private List<String> languages = new ArrayList<>();
     private Spinner citySP;
@@ -49,18 +47,19 @@ public class MainActivity extends AppCompatActivity {
 
         checkBoxTV = findViewById(R.id.checkBoxTV);
         nameET = findViewById(R.id.nameET);
-        ageET = findViewById(R.id.ageET);
         phoneET = findViewById(R.id.phoneET);
         emailET = findViewById(R.id.emailET);
         dateBTN = findViewById(R.id.dateBTN);
+        dateTV = findViewById(R.id.dateTV);
 
         calendar = Calendar.getInstance(Locale.getDefault());
         year = calendar.get(Calendar.YEAR);
         month = calendar.get(Calendar.MONTH);
         dayOfMonth = calendar.get(Calendar.DAY_OF_MONTH);
         SimpleDateFormat simpleDateFormatOnCreate = new SimpleDateFormat("dd/MM/yyyy");
-        String date = simpleDateFormatOnCreate.format(new Date());
+        date = simpleDateFormatOnCreate.format(new Date());
         dateBTN.setText(date);
+        age = getAge(year, month, dayOfMonth);
 
         radioGroup = findViewById(R.id.genderRG);
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -122,22 +121,21 @@ public class MainActivity extends AppCompatActivity {
         */
     }
 
-    private boolean checkEmail(String email){
-        Pattern pattern = Patterns.EMAIL_ADDRESS;
-        return pattern.matcher(email).matches();
-    }
-
     public void register(View view) {
         email = emailET.getText().toString();
         name = nameET.getText().toString();
-        age = ageET.getText().toString();
         phone = phoneET.getText().toString();
         date = dateBTN.getText().toString();
+        int currentAge = Integer.parseInt(age);
 
         if (languages.isEmpty()){
             checkBoxTV.setError("Please select your expertise area.");
         }else if (!checkEmail(email)){
             emailET.setError("Please type your valid email address.");
+        }else if (!checkPhone(phone)){
+            phoneET.setError("Please type your valid phone number.");
+        }else if (currentAge < 20){
+            dateTV.setError("Age Should be more than 20 years.");
         }
         else {
             Employee employee = new Employee(name, age, phone, email, gender, languages, city, date);
@@ -171,6 +169,19 @@ public class MainActivity extends AppCompatActivity {
         return cities;
     }
 
+    private boolean checkEmail(String email){
+        Pattern pattern = Patterns.EMAIL_ADDRESS;
+        return pattern.matcher(email).matches();
+    }
+
+    private boolean checkPhone(String phone){
+        if (phone == null || phone.length() > 14 || phone.length() < 11){
+            return false;
+        }else {
+            return Patterns.PHONE.matcher(phone).matches();
+        }
+    }
+
     public void selectDate(View view) {
         DatePickerDialog datePickerDialogOnSelect = new DatePickerDialog(
                 this, new DatePickerDialog.OnDateSetListener() {
@@ -179,10 +190,23 @@ public class MainActivity extends AppCompatActivity {
                 SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy");
                 Calendar tempCalender = Calendar.getInstance();
                 tempCalender.set(year, month, dayOfMonth);
-                String date = simpleDateFormat.format(tempCalender.getTime());
+                date = simpleDateFormat.format(tempCalender.getTime());
                 dateBTN.setText(date);
+                age = getAge(year, month, dayOfMonth);
             }
         }, year, month, dayOfMonth);
         datePickerDialogOnSelect.show();
+    }
+
+    private String getAge(int year, int month, int dayOfMonth) {
+        Calendar dob = Calendar.getInstance();
+        Calendar today = Calendar.getInstance();
+        dob.set(year, month, dayOfMonth);
+        int newAge = today.get(Calendar.YEAR) - dob.get(Calendar.YEAR);
+
+        Integer ageInt = new Integer(newAge);
+        String age = ageInt.toString();
+        return age;
+
     }
 }

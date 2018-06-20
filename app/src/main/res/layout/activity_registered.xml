@@ -36,28 +36,6 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Age : "
-            android:textColor="@android:color/black"
-            style="?android:textAppearanceMedium"/>
-
-        <TextView
-            android:id="@+id/ageValueTV"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="3"
-            android:text="Name"
-            style="?android:textAppearanceMedium"
-            android:textColor="@android:color/black"/>
-
-    </TableRow>
-
-    <TableRow
-        android:paddingBottom="8dp">
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:text="Gender : "
             android:textColor="@android:color/black"
             style="?android:textAppearanceMedium"/>
@@ -86,6 +64,28 @@
 
         <TextView
             android:id="@+id/dobValueTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:text="Name"
+            style="?android:textAppearanceMedium"
+            android:textColor="@android:color/black"/>
+
+    </TableRow>
+
+    <TableRow
+        android:paddingBottom="8dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Age : "
+            android:textColor="@android:color/black"
+            style="?android:textAppearanceMedium"/>
+
+        <TextView
+            android:id="@+id/ageValueTV"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="3"
