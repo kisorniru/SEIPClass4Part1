@@ -43,8 +43,8 @@
         android:id="@+id/emailET"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="kisorniru@gmail.com"
-        android:hint="Email"/>
+        android:inputType="textEmailAddress"
+        android:hint="email@address.com"/>
 
     <TextView
         android:id="@+id/checkBoxTV"

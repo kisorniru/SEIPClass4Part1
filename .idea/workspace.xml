@@ -25,13 +25,9 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/siddique/seipclass4part1/Employee.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/siddique/seipclass4part1/Employee.java" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/siddique/seipclass4part1/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/siddique/seipclass4part1/MainActivity.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/siddique/seipclass4part1/registeredActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/siddique/seipclass4part1/registeredActivity.java" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_registered.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_registered.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -54,25 +50,42 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="registeredActivity.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/siddique/seipclass4part1/registeredActivity.java">
+      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/siddique/seipclass4part1/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="63" column="36" lean-forward="false" selection-start-line="63" selection-start-column="36" selection-end-line="63" selection-end-column="36" />
-              <folding />
+            <state relative-caret-position="414">
+              <caret line="138" column="19" lean-forward="false" selection-start-line="138" selection-start-column="19" selection-end-line="138" selection-end-column="19" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2263#2535#0" expanded="true" />
+                <element signature="e#2534#2535#0" expanded="true" />
+                <element signature="e#2879#2887#0" expanded="true" />
+                <element signature="e#5798#6305#0" expanded="true" />
+                <element signature="e#6304#6305#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="activity_registered.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_registered.xml">
+      <file leaf-file-name="activity_main.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
           <provider editor-type-id="android-designer2">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="87" column="39" lean-forward="false" selection-start-line="87" selection-start-column="29" selection-end-line="87" selection-end-column="39" />
-              <folding />
+            <state relative-caret-position="132">
+              <caret line="46" column="39" lean-forward="false" selection-start-line="46" selection-start-column="39" selection-end-line="46" selection-end-column="39" />
+              <folding>
+                <element signature="e#401#749#0" expanded="false" />
+                <element signature="e#755#948#0" expanded="false" />
+                <element signature="e#954#1139#0" expanded="false" />
+                <element signature="e#1145#1343#0" expanded="false" />
+                <element signature="e#1910#3109#0" expanded="false" />
+                <element signature="e#3115#4341#0" expanded="false" />
+                <element signature="e#4347#4680#0" expanded="false" />
+                <element signature="e#4686#5301#0" expanded="false" />
+                <element signature="e#5307#5634#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -2112,11 +2125,11 @@
       <list>
         <option value="$PROJECT_DIR$/app/src/main/res/layout/city_spinner.xml" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/siddique/seipclass4part1/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_registered.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/siddique/seipclass4part1/Employee.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/siddique/seipclass4part1/registeredActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/siddique/seipclass4part1/MainActivity.java" />
       </list>
     </option>
   </component>
@@ -2516,44 +2529,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="212" column="19" lean-forward="false" selection-start-line="212" selection-start-column="19" selection-end-line="212" selection-end-column="19" />
-          <folding>
-            <element signature="e#401#749#0" expanded="false" />
-            <element signature="e#755#948#0" expanded="false" />
-            <element signature="e#954#1139#0" expanded="false" />
-            <element signature="e#1145#1343#0" expanded="false" />
-            <element signature="e#1349#1555#0" expanded="false" />
-            <element signature="e#1561#1890#0" expanded="false" />
-            <element signature="e#1896#3095#0" expanded="false" />
-            <element signature="e#3101#4327#0" expanded="false" />
-            <element signature="e#4333#4666#0" expanded="false" />
-            <element signature="e#4672#5287#0" expanded="false" />
-            <element signature="e#5293#5620#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/siddique/seipclass4part1/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="127" column="51" lean-forward="false" selection-start-line="127" selection-start-column="51" selection-end-line="127" selection-end-column="51" />
-          <folding>
-            <element signature="e#2079#2456#0" expanded="false" />
-            <element signature="e#2455#2456#0" expanded="false" />
-            <element signature="method#selectLanguage#0;class#MainActivity#0" expanded="false" />
-            <element signature="method#getCities#0;class#MainActivity#0" expanded="false" />
-            <element signature="e#5690#6197#0" expanded="false" />
-            <element signature="e#6196#6197#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/siddique/seipclass4part1/Employee.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="451">
@@ -2578,6 +2553,42 @@
         <state relative-caret-position="234">
           <caret line="63" column="36" lean-forward="false" selection-start-line="63" selection-start-column="36" selection-end-line="63" selection-end-column="36" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="46" column="39" lean-forward="false" selection-start-line="46" selection-start-column="39" selection-end-line="46" selection-end-column="39" />
+          <folding>
+            <element signature="e#401#749#0" expanded="false" />
+            <element signature="e#755#948#0" expanded="false" />
+            <element signature="e#954#1139#0" expanded="false" />
+            <element signature="e#1145#1343#0" expanded="false" />
+            <element signature="e#1910#3109#0" expanded="false" />
+            <element signature="e#3115#4341#0" expanded="false" />
+            <element signature="e#4347#4680#0" expanded="false" />
+            <element signature="e#4686#5301#0" expanded="false" />
+            <element signature="e#5307#5634#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/siddique/seipclass4part1/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="138" column="19" lean-forward="false" selection-start-line="138" selection-start-column="19" selection-end-line="138" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2263#2535#0" expanded="true" />
+            <element signature="e#2534#2535#0" expanded="true" />
+            <element signature="e#2879#2887#0" expanded="true" />
+            <element signature="e#5798#6305#0" expanded="true" />
+            <element signature="e#6304#6305#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
